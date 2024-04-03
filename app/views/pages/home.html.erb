@@ -1,0 +1,15 @@
+<h1>Potato Trade</h1>
+
+<p>Pour générer la data lancez la commande <strong>rails db:seed</strong> dans votre terminal.</p> 
+
+<p>Afficher le cours de la pomme de terre du :</p>
+
+<%= link_to DateTime.now.strftime("%d/%m/%Y"), prices_path(date:DateTime.now - 1) %>
+
+<p>Afficher le meilleur gain possible (1 opération achat/vente) au :</p>
+
+<%= link_to DateTime.now.strftime("%d/%m/%Y"), best_gain_path(date:DateTime.now - 1) %>
+
+<p>Afficher le meilleur gain possible (N opérations achat/vente) au :</p>
+
+<%= link_to DateTime.now.strftime("%d/%m/%Y"), best_gain_path(date:DateTime.now - 1, n_operations:true) %>
